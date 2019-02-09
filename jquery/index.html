@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music</title>
+    <link rel="stylesheet" href="bulma-0.7.2/css/bulma.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <section class="section">
+        <header>
+            <h1 class="title" >Fine Your Song
+            <i class="fas fa-music"></i>
+        </h1>
+        <h2 class="subtitle">Music for you.</h2>
+        </header>
+        
+        
+        <div class="container"></div>
+            <div class="level">
+                <div class="level-item">
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal"></div>
+                        <div class="field-body"></div>
+                        <div class="field"></div>
+                        <p class="control">
+                            <input  class="input is-rounded" type="text" id="input-text" 
+                              placeholder="Songs">   
+                        </p>
+                        <div class="control">
+                            <button class="button is-dark" id="search-btn">
+                                Search
+                            </button>
+                        </div>
+                        
+                    </div> 
+                                   
+                </div> 
+                
+            </div>
+             
+        </div>
+        <div>
+            <div>
+                
+            <button class="button is-dark" id="advance-btn">Advance Search</button>
+        
+            <div class="level-item" id="advance-search">
+                <div class="select is-rounded">
+                    <label for="genres" style="text-align: left;">Select Genres: &nbsp;</label>
+                    <select id="genres-selector"></select>
+                </div>
+                
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal"></div>
+                    <div class="field-body"></div>
+                    <div class="field"></div>
+                    <p class="control">
+                        <input  class="input is-rounded" type="text" id="adv-input-text" onfocus="this.value" 
+                          placeholder="Artists, Album, or Labels">   
+                    </p>
+                    <button class="button is-dark" id="advance-btn-search"> Search</button>
+                    <div class="buttons" id="cancel-btn">
+                        <span class="button is-danger">Cancel</span>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    <p id ="warning"></p>
+    <p id = "warn"></p>
+    <table class="table is-striped">
+        <thead>
+            <tr>
+                <th>Song</th>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Genres</th>
+                <th>Labels</th>
+            </tr>
+        </thead>
+        <tbody id="table"></tbody>
+    </table>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <h3>Reference</h3>
+            <ul>
+                <li>
+                    <a href="https://open.spotify.com/browse/featured">Spotify</a>
+                </li>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Highlight_(band)">Information: Highlight</a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/search?client=firefox-b-d&q=beast+%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%87&stick=H4sIAAAAAAAAAONgFuLSz9U3sDDIysuuUkJia4llJ1vp55YWZybrJxaVZBaXWBXn56UXL2IVSkpNLC5ReLCz4cGOeQ92LH2wox0AOEdXfEcAAAA&sa=X&ved=2ahUKEwj3nLqIrq_gAhVKMI8KHaIMDf0QMTAeegQIBhAN&biw=1366&bih=654">
+                        Songs: Highlight</a>
+                </li>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/The_1975">Information: The 1975</a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/search?client=firefox-b-d&biw=1366&bih=617&ei=5CZfXLfTNqGevQTAoKLoDw&q=the+1975+%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%87&oq=the+1975+%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%87&gs_l=psy-ab.3..0l4j0i30l2j0i8i30l4.99918.105471..105677...1.0..0.95.1046.14......0....1..gws-wiz.......0i71j35i304i39j0i7i30j0i13j0i7i10i30j0i8i7i30j35i39j0i67j0i131i67j0i131.mMahMUsAkR4">
+                        Songs: The 1975</a>
+                </li>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Billie_Eilish">Information&Songs: Billie Eilish</a>
+                </li>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Aimer">Information: Aimer</a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/search?client=firefox-b-d&biw=1366&bih=617&ei=ayhfXPXaGd6lwgO8lZOoCg&q=aimer+%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%87&oq=aimer+%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%87&gs_l=psy-ab.3..0j0i8i30.950.3484..3599...1.0..0.77.1078.15......0....1..gws-wiz.......0i71j0i8i7i30j35i39j0i131i67j0i67j0i131j0i7i30j0i7i10i30j0i13j0i13i30j0i13i5i30.yWUV7OiAyCA">
+                        Songs: The 1975</a>
+                </li>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Selena_Gomez">Information: Selena Gomez</a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/search?client=firefox-b-d&biw=1366&bih=617&ei=byhfXL37OJWSwgPN04iYDw&q=selena+gomez+%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%87&oq=sele+%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%87&gs_l=psy-ab.3.0.0i7i30l3j0i8i7i30l7.67722.68136..69330...0.0..0.88.318.4......0....1..gws-wiz.......0i71.KXj97NAFsKs">
+                        Songs: Selena Gomez</a>
+                </li>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/WayV">Information&Songs: WayV</a>
+                </li>
+            </ul>
+            
+            
+        </div>
+    </footer>
+    </section>
+    
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="myscript.js">
+   </script>
+</body>
+</html>

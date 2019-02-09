@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Righteous|Ubuntu+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|PT+Sans+Narrow');
+
+header {
+    margin: 10px;
+    padding: 75px;
+    background-color: #a9baac;
+}
+h1 {
+    
+    text-align: center;
+    font-family: 'Righteous', cursive;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+.select {
+    position: relative;
+}
+
+p {
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    color: #f44e42;
+}
+a {
+    font-size: px;
+    text-indent: 20px;
+}
+a:link { 
+	font-weight: bold;
+	text-decoration: none; 
+	color: #a4d6c0;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #6bce7a;
+	}
+a:hover, a:focus, a:active { 
+	color: #41a356;
+    }
+
+.content h3 {
+    font-size: 1.7em;
+    margin-bottom: 0.6666em;
+    text-align: left;
+    text-indent: 16px;
+    color: #3a3a39;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+ 
+  
+  
